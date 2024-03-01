@@ -4,6 +4,13 @@ const multiplicacion = numero =>{
     }
 }
 const factorial = numero => {
+    let resultado = 1;
+    for (let i = 1; i <= numero; i++) {
+        resultado *= i;
+        console.log(`Factorial de ${i} es: ${resultado}`);
+    }
+}
+const factorialDetallado = numero => {
     for (let i = 1; i <= numero; i++) {
         let formula = `${i}! = `;
         let resultado = 1;
@@ -17,6 +24,7 @@ const factorial = numero => {
         console.log(`${formula} = ${resultado}`);
     }
 }
+
 const validarNumero =  numero =>{
     if (numero >= 20 || numero <=1){
         console.log(`${numero} esta fuera del rango, debe estar entre 1 y 20`);
@@ -24,6 +32,7 @@ const validarNumero =  numero =>{
     else {
         multiplicacion(numero);
         factorial(numero);
+        factorialDetallado(numero);
     }
 }
 
